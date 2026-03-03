@@ -1,0 +1,80 @@
+{
+  "title": "tomato.md",
+  "description": "Natural tomato and pepper breeding.",
+  "hero": {
+    "eyebrow": "Natural tomato and pepper breeding, big flavor",
+    "heading": "Buy tomatoes that melt in your mouth.",
+    "lead": "We cultivate resilient heritage lines and starter plants adapted for our climate. From seed to harvest, we offer you the best tomato.",
+    "metrics": [
+      {
+        "value": "28+",
+        "label": "unique breeding lines"
+      },
+      {
+        "value": "50+",
+        "label": "local markets served"
+      },
+      {
+        "value": "4.9/5",
+        "label": "Clients rating"
+      }
+    ]
+  },
+  "services": {
+    "eyebrow": "Services",
+    "heading": "Buy our tomatoes.",
+    "items": [
+      {
+        "title": "Large quantity",
+        "description": "We have the capacity to supply large quantities of tomatoes for legal and natural persons. Our tomatoes are raised indoors and hardened off for the local climate.",
+        "linkText": "Make a contract"
+      },
+      {
+        "title": "Delivery",
+        "description": "Order tomatoes and we deliver directly to your market or home. We offer flexible delivery schedules during the growing season.",
+        "linkText": "Order"
+      },
+      {
+        "title": "The best prices",
+        "description": "We offer competitive pricing for all our tomato varieties, ensuring you get the best value for your investment.",
+        "linkText": "Lets haggle"
+      }
+    ]
+  },
+  "benefits": {
+    "eyebrow": "Why us?",
+    "heading": "Built for flavor, tested for resilience.",
+    "lead": "Our breeding program prioritizes taste, disease resistance, and consistent harvests.",
+    "items": [
+      {
+        "title": "Bred for Taste",
+        "description": "Hand-picked flavor profiles with professional tasting notes."
+      },
+      {
+        "title": "Built for Resilience",
+        "description": "Adapted genetics for short seasons and cool climates."
+      },
+      {
+        "title": "Estate-Quality Genetics:",
+        "description": "Open-pollinated lines refined over seasons to ensure every bite is as good as the last."
+      },
+      {
+        "title": "Great Price/Quality ratio",
+        "description": "Get the elite flavor and hardy resilience of a boutique breeding program at a price that makes a gourmet harvest accessible to every backyard."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "heading": "Make the world tastier with us.",
+    "schedule": "Open Mon-Sat, 09:00-20:00",
+    "address": "Dumbravita, Singerei",
+    "phone": "+373 78084909",
+    "email": "obrijanfilip2004@gmail.com"
+  },
+  "promo": {
+    "heading": "🌱 First-Time Customer Special",
+    "description": "Get 15% off your first order! Fresh tomatoes delivered to your doorstep.",
+    "buttonText": "Claim your discount"
+  }
+}

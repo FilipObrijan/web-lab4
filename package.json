@@ -4,10 +4,12 @@
   "description": "Tomato Nursery Landing Page with Astro SSG",
   "type": "module",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "tinacms dev -c \"astro dev\"",
+    "dev:astro": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview"
+    "build": "tinacms build && astro build",
+    "preview": "astro preview",
+    "tina": "tinacms dev"
   },
   "dependencies": {
     "astro": "^4.0.0"
