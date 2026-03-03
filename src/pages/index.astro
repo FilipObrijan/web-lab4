@@ -2,9 +2,10 @@
 import Layout from '../layouts/Layout.astro';
 import '../styles/reset.css';
 import '../styles/style.css';
+import content from '../../content/pages/home.json';
 ---
 
-<Layout title="tomato.md" description="Natural tomato and pepper breeding.">
+<Layout title={content.title} description={content.description}>
   <!-- Mobile-only Quick CTA -->
   <a href="#contact" class="mobile-cta-fab" aria-label="Quick order">
     <span>🍅</span>
@@ -27,29 +28,22 @@ import '../styles/style.css';
 
     <section class="hero-content">
       <div class="hero-copy">
-        <p class="eyebrow">Natural tomato and pepper breeding, big flavor</p>
-        <h1>Buy tomatoes that melt in your mouth.</h1>
+        <p class="eyebrow">{content.hero.eyebrow}</p>
+        <h1>{content.hero.heading}</h1>
         <p class="lead">
-          We cultivate resilient heritage lines and starter plants adapted for
-          our climate. From seed to harvest, we offer you the best tomato.
+          {content.hero.lead}
         </p>
         <div class="hero-actions d-flex gap-3 flex-wrap">
           <a class="button primary" href="#contact">Make an order</a>
           <a class="button ghost" href="#services">Explore services</a>
         </div>
         <div class="hero-metrics row g-3">
-          <div class="col-auto">
-            <h3 class="mb-1">28+</h3>
-            <p class="mb-0">unique breeding lines</p>
-          </div>
-          <div class="col-auto">
-            <h3 class="mb-1">50+</h3>
-            <p class="mb-0">local markets served</p>
-          </div>
-          <div class="col-auto">
-            <h3 class="mb-1">4.9/5</h3>
-            <p class="mb-0">Clients rating</p>
-          </div>
+          {content.hero.metrics.map((metric) => (
+            <div class="col-auto">
+              <h3 class="mb-1">{metric.value}</h3>
+              <p class="mb-0">{metric.label}</p>
+            </div>
+          ))}
         </div>
       </div>
       <div class="hero-art" aria-hidden="true">
@@ -69,43 +63,26 @@ import '../styles/style.css';
     <section class="section" id="services">
       <div class="section-header">
         <p class="eyebrow">Services</p>
-        <h2>Buy our tomatoes.</h2>
+        <h2>{content.services.heading}</h2>
       </div>
       <div class="card-grid row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-        <div class="col">
-          <article class="card h-100">
-            <h3>Large quantity</h3>
-            <p>
-              We have the capacity to supply large quantities of tomatoes for legal and natural persons. Our tomatoes are raised indoors and hardened off for the local climate.
-            </p>
-            <a href="#contact" class="mt-auto">Make a contract</a>
-          </article>
-        </div>
-        <div class="col">
-          <article class="card h-100">
-            <h3>Delivery</h3>
-            <p>
-              Order tomatoes and we deliver directly to your market or home. We offer flexible delivery schedules during the growing season.
-            </p>
-            <a href="#contact" class="mt-auto">Order</a>
-          </article>
-        </div>
-        <div class="col">
-          <article class="card h-100">
-            <h3>The best prices</h3>
-            <p>
-              We offer competitive pricing for all our tomato varieties, ensuring you get the best value for your investment.
-            </p>
-            <a href="#contact" class="mt-auto">Lets haggle</a>
-          </article>
-        </div>
+        {content.services.items.map((service) => (
+          <div class="col">
+            <article class="card h-100">
+              <div class="card-icon">{service.icon}</div>
+              <h3>{service.title}</h3>
+              <p>{service.description}</p>
+              <a href="#contact" class="mt-auto">Learn more</a>
+            </article>
+          </div>
+        ))}
       </div>
     </section>
 
     <section class="section split" id="benefits">
       <div class="col-lg-5">
         <p class="eyebrow">Why us?</p>
-        <h2>Built for flavor, tested for resilience.</h2>
+        <h2>{content.benefits.heading}</h2>
         <p class="lead">
           Our breeding program prioritizes taste, disease resistance, and
           consistent harvests.
@@ -116,31 +93,22 @@ import '../styles/style.css';
         </div>
       </div>
       <div class="benefit-grid col-lg-7">
-        <div class="benefit mb-3">
-          <h3>Bred for Taste</h3>
-          <p class="mb-0">Hand-picked flavor profiles with professional tasting notes.</p>
-        </div>
-        <div class="benefit mb-3">
-          <h3>Built for Resilience</h3>
-          <p class="mb-0">Adapted genetics for short seasons and cool climates.</p>
-        </div>
-        <div class="benefit mb-3">
-          <h3>Estate-Quality Genetics:</h3>
-          <p class="mb-0">Open-pollinated lines refined over seasons to ensure every bite is as good as the last.</p>
-        </div>
-        <div class="benefit mb-0">
-          <h3>Great Price/Quality ratio</h3>
-          <p class="mb-0">Get the elite flavor and hardy resilience of a boutique breeding program at a price that makes a gourmet harvest accessible to every backyard.</p>
-        </div>
+        {content.benefits.items.map((benefit, index) => (
+          <div class={index === content.benefits.items.length - 1 ? "benefit mb-0" : "benefit mb-3"}>
+            <div class="benefit-icon">{benefit.icon}</div>
+            <h3>{benefit.title}</h3>
+            <p class="mb-0">{benefit.description}</p>
+          </div>
+        ))}
       </div>
     </section>
 
     <!-- Mobile-only promotional banner -->
     <section class="mobile-only-promo">
       <div class="promo-content">
-        <h3>🌱 First-Time Customer Special</h3>
-        <p>Get 15% off your first order! Fresh tomatoes delivered to your doorstep.</p>
-        <a href="#contact" class="button primary">Claim your discount</a>
+        <h3>{content.promo.heading}</h3>
+        <p>{content.promo.description}</p>
+        <a href="#contact" class="button primary">{content.promo.buttonText}</a>
       </div>
     </section>
 
@@ -153,10 +121,10 @@ import '../styles/style.css';
         <div class="col-md-6 col-lg-5">
           <div class="contact-card">
             <h3>Make an order</h3>
-            <p class="mb-2">Open Mon-Sat, 09:00-20:00</p>
-            <p class="mb-2">Dumbr avita, Singerei</p>
-            <p class="mb-2">+373 78084909</p>
-            <p class="mb-0">obrijanfilip2004@gmail.com</p>
+            <p class="mb-2">{content.contact.schedule}</p>
+            <p class="mb-2">{content.contact.address}</p>
+            <p class="mb-2">{content.contact.phone}</p>
+            <p class="mb-0">{content.contact.email}</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-7">
