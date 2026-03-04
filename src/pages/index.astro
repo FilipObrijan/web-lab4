@@ -130,22 +130,16 @@ import content from '../../content/pages/home.json';
         <div class="col-md-6 col-lg-7">
           <form class="contact-form">
             <div class="mb-3">
-              <label class="form-label">
-                Full name
-                <input type="text" name="name" class="form-control" placeholder="Your name" />
-              </label>
+              <label class="form-label" for="name">Full name</label>
+              <input type="text" id="name" name="name" class="form-control" placeholder="Your name" />
             </div>
             <div class="mb-3">
-              <label class="form-label">
-                Email
-                <input type="email" name="email" class="form-control" placeholder="you@email.com" />
-              </label>
+              <label class="form-label" for="email">Email</label>
+              <input type="email" id="email" name="email" class="form-control" placeholder="you@email.com" />
             </div>
             <div class="mb-3">
-              <label class="form-label">
-                What do you want to buy, and what quantity?
-                <textarea name="message" rows="4" class="form-control" placeholder="Tell us about your plot."></textarea>
-              </label>
+              <label class="form-label" for="message">What do you want to buy, and what quantity?</label>
+              <textarea id="message" name="message" rows="4" class="form-control" placeholder="Tell us about your plot."></textarea>
             </div>
             <button class="button primary" type="submit">Send request</button>
           </form>
