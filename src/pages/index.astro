@@ -2,7 +2,16 @@
 import Layout from '../layouts/Layout.astro';
 import '../styles/reset.css';
 import '../styles/style.css';
-import content from '../../content/pages/home.json';
+
+// Dynamic import for hot-reload during development
+import { readFileSync } from 'fs';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const contentPath = join(__dirname, '../../content/pages/home.json');
+const content = JSON.parse(readFileSync(contentPath, 'utf-8'));
 ---
 
 <Layout title={content.title} description={content.description}>
