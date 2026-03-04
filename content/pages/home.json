@@ -24,17 +24,14 @@
     "heading": "What we offer",
     "items": [
       {
-        "icon": "🌱",
         "title": "Starter Plants",
         "description": "Greenhouse-hardened seedlings of our proprietary breeding lines, ready for transplant. Ships in spring."
       },
       {
-        "icon": "🍅",
         "title": "Fresh Heirloom Tomatoes",
         "description": "Peak-season heritage varieties handpicked at optimal ripeness. Available July–September at regional markets."
       },
       {
-        "icon": "🧬",
         "title": "Breeding Consultation",
         "description": "Expert guidance on selecting open-pollinated varieties or starting your own breeding program. Remote or on-site visits."
       }
@@ -44,35 +41,31 @@
     "heading": "Why choose us?",
     "items": [
       {
-        "icon": "🔬",
         "title": "Proven genetics",
         "description": "Multi-year selection for flavor, yield, and disease resistance in local climate."
       },
       {
-        "icon": "🌿",
         "title": "Organic practices",
         "description": "No synthetic pesticides or fertilizers; soil health and biodiversity first."
       },
       {
-        "icon": "📍",
         "title": "Locally adapted",
         "description": "Bred and trialed on-site to thrive in our region's unique growing conditions."
       },
       {
-        "icon": "💚",
         "title": "Passionate growers",
         "description": "Family-run nursery dedicated to preserving heirloom flavor and open-pollinated seed."
       }
     ]
   },
   "contact": {
-    "schedule": "Mon-Fri · 9–17 | Sat · 10–14",
-    "address": "28 Redwood Lane, Greenfield, CA 93927",
-    "phone": "+1 (831) 555-0198",
-    "email": "hello@redwood-tomato.com"
+    "schedule": "Open Mon-Sat, 09:00-20:00",
+    "address": "Dumbravita, Singerei",
+    "phone": "+373 79918564",
+    "email": "danielboleac@gmail.com"
   },
   "promo": {
-    "heading": "🌱 Spring Sale",
+    "heading": " Spring Sale",
     "description": "15% off starter plants",
     "buttonText": "Order now"
   }

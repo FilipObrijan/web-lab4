@@ -1,29 +1,21 @@
+// tina/config.ts
 import { defineConfig } from "tinacms";
-
-// Your hosting provider likely exposes this as an environment variable
-const branch =
-  process.env.GITHUB_BRANCH ||
-  process.env.VERCEL_GIT_COMMIT_REF ||
-  process.env.HEAD ||
-  "main";
-
-export default defineConfig({
+var branch = process.env.GITHUB_BRANCH || process.env.VERCEL_GIT_COMMIT_REF || process.env.HEAD || "main";
+var config_default = defineConfig({
   branch,
-
   // Get this from tina.io
   clientId: process.env.TINA_CLIENT_ID,
   // Get this from tina.io
   token: process.env.TINA_TOKEN,
-
   build: {
     outputFolder: "admin",
-    publicFolder: "public",
+    publicFolder: "public"
   },
   media: {
     tina: {
       mediaRoot: "screenshots",
-      publicFolder: "public",
-    },
+      publicFolder: "public"
+    }
   },
   // See docs on content modeling for more info on how to setup new content models: https://tina.io/docs/schema/
   schema: {
@@ -38,13 +30,13 @@ export default defineConfig({
             type: "string",
             name: "title",
             label: "Page Title",
-            required: true,
+            required: true
           },
           {
             type: "string",
             name: "description",
             label: "Meta Description",
-            required: true,
+            required: true
           },
           {
             type: "object",
@@ -54,20 +46,20 @@ export default defineConfig({
               {
                 type: "string",
                 name: "eyebrow",
-                label: "Eyebrow Text",
+                label: "Eyebrow Text"
               },
               {
                 type: "string",
                 name: "heading",
-                label: "Main Heading",
+                label: "Main Heading"
               },
               {
                 type: "string",
                 name: "lead",
                 label: "Lead Paragraph",
                 ui: {
-                  component: "textarea",
-                },
+                  component: "textarea"
+                }
               },
               {
                 type: "object",
@@ -78,16 +70,16 @@ export default defineConfig({
                   {
                     type: "string",
                     name: "value",
-                    label: "Metric Value",
+                    label: "Metric Value"
                   },
                   {
                     type: "string",
                     name: "label",
-                    label: "Metric Label",
-                  },
-                ],
-              },
-            ],
+                    label: "Metric Label"
+                  }
+                ]
+              }
+            ]
           },
           {
             type: "object",
@@ -97,7 +89,7 @@ export default defineConfig({
               {
                 type: "string",
                 name: "heading",
-                label: "Section Heading",
+                label: "Section Heading"
               },
               {
                 type: "object",
@@ -108,24 +100,24 @@ export default defineConfig({
                   {
                     type: "string",
                     name: "icon",
-                    label: "Icon Emoji",
+                    label: "Icon Emoji"
                   },
                   {
                     type: "string",
                     name: "title",
-                    label: "Service Title",
+                    label: "Service Title"
                   },
                   {
                     type: "string",
                     name: "description",
                     label: "Service Description",
                     ui: {
-                      component: "textarea",
-                    },
-                  },
-                ],
-              },
-            ],
+                      component: "textarea"
+                    }
+                  }
+                ]
+              }
+            ]
           },
           {
             type: "object",
@@ -135,7 +127,7 @@ export default defineConfig({
               {
                 type: "string",
                 name: "heading",
-                label: "Section Heading",
+                label: "Section Heading"
               },
               {
                 type: "object",
@@ -146,24 +138,24 @@ export default defineConfig({
                   {
                     type: "string",
                     name: "icon",
-                    label: "Icon Emoji",
+                    label: "Icon Emoji"
                   },
                   {
                     type: "string",
                     name: "title",
-                    label: "Benefit Title",
+                    label: "Benefit Title"
                   },
                   {
                     type: "string",
                     name: "description",
                     label: "Benefit Description",
                     ui: {
-                      component: "textarea",
-                    },
-                  },
-                ],
-              },
-            ],
+                      component: "textarea"
+                    }
+                  }
+                ]
+              }
+            ]
           },
           {
             type: "object",
@@ -173,24 +165,24 @@ export default defineConfig({
               {
                 type: "string",
                 name: "schedule",
-                label: "Schedule",
+                label: "Schedule"
               },
               {
                 type: "string",
                 name: "address",
-                label: "Address",
+                label: "Address"
               },
               {
                 type: "string",
                 name: "phone",
-                label: "Phone",
+                label: "Phone"
               },
               {
                 type: "string",
                 name: "email",
-                label: "Email",
-              },
-            ],
+                label: "Email"
+              }
+            ]
           },
           {
             type: "object",
@@ -200,22 +192,25 @@ export default defineConfig({
               {
                 type: "string",
                 name: "heading",
-                label: "Heading",
+                label: "Heading"
               },
               {
                 type: "string",
                 name: "description",
-                label: "Description",
+                label: "Description"
               },
               {
                 type: "string",
                 name: "buttonText",
-                label: "Button Text",
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
+                label: "Button Text"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
 });
+export {
+  config_default as default
+};
