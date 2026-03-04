@@ -1,0 +1,49 @@
+fragment PagesParts on Pages {
+  __typename
+  title
+  description
+  hero {
+    __typename
+    eyebrow
+    heading
+    lead
+    metrics {
+      __typename
+      value
+      label
+    }
+  }
+  services {
+    __typename
+    heading
+    items {
+      __typename
+      icon
+      title
+      description
+    }
+  }
+  benefits {
+    __typename
+    heading
+    items {
+      __typename
+      icon
+      title
+      description
+    }
+  }
+  contact {
+    __typename
+    schedule
+    address
+    phone
+    email
+  }
+  promo {
+    __typename
+    heading
+    description
+    buttonText
+  }
+}
