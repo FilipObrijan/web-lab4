@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Auto-commit content changes
+if git diff --cached --name-only | grep -q "^content/"; then
+  echo "Content changes detected, will auto-push after commit..."
+fi

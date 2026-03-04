@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "tinacms dev -c \"astro dev\"",
+    "watch:content": "node scripts/auto-push.js",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview"
